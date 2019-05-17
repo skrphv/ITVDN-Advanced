@@ -10,7 +10,7 @@ uint64_t make_specific_number (uint32_t base, uint32_t power)
 
     for (uint32_t i = 1; i <= power; i++ )
     {
-        values.push_back (std::pow(base, i));
+        values.push_back (static_cast<uint64_t> (std::pow (base, i)));
     }
 
     if (values.empty())
