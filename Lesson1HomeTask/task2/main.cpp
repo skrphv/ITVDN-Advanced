@@ -80,17 +80,21 @@ void run_test (uint32_t n, uint32_t x, uint64_t answ, uint64_t (*calculation_fun
 int main()
 {
     std::cout << "Tests with `make_specific_number` function" << std::endl;
-    run_test (10, 5, 1010101010, make_specific_number); // have to be correct
-    run_test (10, 5,     101010, make_specific_number); // have to be not correct
-    run_test (19, 4,   19316911, make_specific_number); // have to be correct
-    run_test (19, 4,     316911, make_specific_number); // have to be not correct
+    run_test (10, 5, 1010101010, make_specific_number);
+    run_test (19, 4,   19316911, make_specific_number);
+
+    run_test (1, 4,     1111, make_specific_number);
+    run_test (1, 1,        1, make_specific_number);
+    run_test (4, 1,        4, make_specific_number);
 
     std::cout << std::endl;
     std::cout << "Tests with `make_specific_number_2` function" << std::endl;
-    run_test (10, 5, 1010101010, make_specific_number_2); // have to be correct
-    run_test (10, 5,     101010, make_specific_number_2); // have to be not correct
-    run_test (19, 4,   19316911, make_specific_number_2); // have to be correct
-    run_test (19, 4,     316911, make_specific_number_2); // have to be not correct
+    run_test (10, 5, 1010101010, make_specific_number_2);
+    run_test (19, 4,   19316911, make_specific_number_2);
+
+    run_test (1, 4,     1111, make_specific_number_2);
+    run_test (1, 1,        1, make_specific_number_2);
+    run_test (4, 1,        4, make_specific_number_2);
 
     return 0;
 }
